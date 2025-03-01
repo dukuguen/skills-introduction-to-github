@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .video-item {
+            text-align: center;
+        }
+        iframe {
+            border-radius: 10px;
+            width: 100%;
+            max-width: 560px;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>TA Collection</h1>
+    <div class="video-container">
+        <div class="video-item">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2J-DcDcmTW4?si=l1EekDzOev_FWxTz" 
+                title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p><strong>Video 1:</strong> Arash .</p>
+        </div>
+        
+        <div class="video-item">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kg34_f89kKQ?si=xFaEHtc5baOVYbUt" 
+                title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p><strong>Video 2:</strong> Một video khác đáng xem với nội dung cuốn hút.</p>
+        </div>
+    </div>
+</body>
+</html>

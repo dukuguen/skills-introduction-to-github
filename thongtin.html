@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin</title>
+    <link rel="stylesheet" href="/ASM/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+        }
+
+        fieldset {
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: large;
+            padding: 10px;
+            background: #3d8e7c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        input[type="color"] {
+            padding: 5px;
+            width: 200px;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        label {
+            flex: 1;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        input, select, textarea {
+            flex: 2;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {background: #0056b3;}
+
+        .flex-container {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Thông tin cá nhân</legend>
+            <div>
+                <label>Họ:</label>
+                <input type="text" placeholder="Nhập họ của bạn">
+            </div>
+
+            <div>
+                <label>Tên:</label>
+                <input type="text" placeholder="Nhập họ và tên của bạn">
+            </div>
+
+            <div>
+                <label>Giới tính:</label>
+                <select>
+                    <option selected>Chọn giới tính</option>
+                    <option>Nam</option>
+                    <option>Nữ</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Trường:</label>
+                <input type="text" placeholder="Nhập trường bạn đang học">
+            </div>
+
+            <div>
+                <label>MSSV:</label>
+                <input type="text" placeholder="Nhập mã sinh viên">
+            </div>
+
+            <div>
+                <label>Email:</label>
+                <input type="email" placeholder="example@domain.com">
+            </div>
+
+            <div>
+                <label>Số điện thoại:</label>
+                <input type="text" placeholder="Nhập số điện thoại của bạn">
+            </div>
+
+            <div>
+                <label>Ngày sinh:</label>
+                <input type="date">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Thông tin bổ sung</legend>
+            <div>
+                <label>Sở thích:</label>
+                <input type="text" placeholder="Sở thích của bạn">
+            </div>
+
+            <div>
+                <label>Màu yêu thích:</label>
+                <input type="color" value="#00FA9A">
+            </div>
+
+            <div>
+                <label>Ảnh đại diện:</label>
+                <input type="file">
+            </div>
+
+            <div>
+                <label>Quê quán:</label>
+                <input type="text" placeholder="Nhập quê quán của bạn">
+            </div>
+
+            <div>
+                <label>Chuyên ngành:</label>
+                <select>
+                    <option selected>Chọn chuyên ngành</option>
+                    <option>Khoa học máy tính</option>
+                    <option>Quản lý phần mềm</option>
+                    <option>Lập trình Game</option>
+                    <option>Lập trình Website</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Ngôn ngữ lập trình:</label>
+                <input type="text" placeholder="Các ngôn ngữ lập trình bạn đã biết">
+            </div>
+
+            <div>
+                <label for="kn">Kinh nghiệm chuyên ngành:</label>
+                <textarea name="kn" placeholder="Viết một vài dòng giới thiệu về kinh nghiệm của bạn..."></textarea>
+            </div>
+        </fieldset>
+        <div class="flex-container">
+            <div><button type="button">Gửi thông tin</button></div>
+            <div class="bt"><button type="submit" disabled>Submit</button></div>
+            <div><button type="button">Xem trước</button></div>
+        </div>
+    </form>
+    <script>
+        const rangeInput = document.getElementById("rangeInput");
+        const rangeOutput = document.getElementById("rangeOutput");
+        rangeInput.addEventListener("input", () => {
+            rangeOutput.value = rangeInput.value;
+            rangeOutput.textContent = rangeInput.value;
+        });
+    </script>
+</body>
+</html>
